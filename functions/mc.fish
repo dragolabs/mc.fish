@@ -4,7 +4,7 @@ function mc
     mkdir -p "/tmp/mc-$USER/"
 
     set MC_BIN (command -v mc)
-    $MC_BIN -P $MC_PWD_FILE $argv
+    $MC_BIN --nosubshell -P $MC_PWD_FILE $argv
 
     if test -r $MC_PWD_FILE
         set MC_PWD (cat $MC_PWD_FILE)
